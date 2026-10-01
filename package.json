@@ -1,0 +1,18 @@
+{
+  "name": "sql-course",
+  "private": true,
+  "type": "module",
+  "description": "A fun, interactive SQL course for international beginners (Slidev)",
+  "scripts": {
+    "dev": "slidev slides.md --open",
+    "build": "slidev build slides.md",
+    "export": "slidev export slides.md",
+    "export-notes": "slidev export-notes slides.md"
+  },
+  "dependencies": {
+    "@slidev/cli": "^53.0.0",
+    "@slidev/theme-default": "^0.25.0",
+    "sql.js": "^1.14.2",
+    "vue": "^3.5.43"
+  }
+}

@@ -1,0 +1,91 @@
+:root {
+  --pp-red: #e63946;
+  --pp-cheese: #ffc233;
+  --pp-green: #2a9d8f;
+  --pp-brown: #5a3a22;
+  --pp-cream: #fff8ec;
+  --slidev-theme-primary: var(--pp-red);
+}
+
+.slidev-layout {
+  background: var(--pp-cream);
+  color: var(--pp-brown);
+  padding: 1.5rem 2.8rem 1rem;
+}
+.slidev-layout.cover, .slidev-layout.center, .slidev-layout.end { padding: 1.5rem 2.8rem; }
+.slidev-layout h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+.slidev-layout h1 + p { margin-top: 0; margin-bottom: 0.4rem; }
+
+.slidev-layout h1 {
+  color: var(--pp-red);
+  font-weight: 900;
+  letter-spacing: -0.01em;
+}
+.slidev-layout h2, .slidev-layout h3 { color: var(--pp-brown); font-weight: 800; }
+.slidev-layout h1 + p { opacity: 0.8; }
+
+/* inline code on cream paper */
+.slidev-layout :not(pre) > code {
+  background: #ffe9c2;
+  color: #a3361b;
+  border-radius: 6px;
+  padding: 0.05em 0.35em;
+}
+.slidev-layout li::marker { color: var(--pp-red); }
+
+/* clicks pop in instead of just fading */
+.slidev-vclick-target { transition: opacity 0.35s ease, transform 0.35s cubic-bezier(0.3, 1.5, 0.6, 1); }
+.slidev-vclick-hidden { transform: translateY(12px) scale(0.92); }
+
+/* ---- reusable bits ---- */
+.pizza-spin { font-size: 7rem; display: inline-block; animation: spin 8s linear infinite; filter: drop-shadow(0 10px 12px rgb(0 0 0 / 25%)); }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.chip {
+  display: inline-block; padding: 0.25rem 0.9rem; margin: 0.25rem; border-radius: 999px;
+  background: #fff; border: 2px solid var(--pp-cheese); font-weight: 800; font-size: 1.1rem;
+  box-shadow: 0 3px 8px rgb(80 40 0 / 10%);
+  opacity: 0; transform: scale(0.4) rotate(-8deg);
+  transition: opacity 0.4s, transform 0.5s cubic-bezier(0.3, 1.6, 0.5, 1);
+}
+.chip.show { opacity: 1; transform: none; }
+
+.card {
+  background: #fff; border-radius: 16px; padding: 0.8rem 1rem; text-align: left;
+  box-shadow: 0 4px 14px rgb(80 40 0 / 12%); border-top: 6px solid var(--pp-cheese);
+}
+.card h3 { margin: 0 0 0.2rem; font-size: 1.1em; }
+.card .big { font-size: 2.2rem; line-height: 1; }
+.card.red { border-color: var(--pp-red); }
+.card.green { border-color: var(--pp-green); }
+.card.blue { border-color: #3b82d6; }
+.card.purple { border-color: #7c5cd6; }
+
+.grid-auto { display: grid; gap: 0.9rem; }
+.cols-2 { grid-template-columns: repeat(2, 1fr); }
+.cols-3 { grid-template-columns: repeat(3, 1fr); }
+.cols-4 { grid-template-columns: repeat(4, 1fr); }
+.cols-5 { grid-template-columns: repeat(5, 1fr); }
+
+/* SQL "lego" blocks */
+.lego { display: block; padding: 0.35rem 1rem; border-radius: 10px; font-family: var(--slidev-code-font-family); font-weight: 700; color: #fff; text-align: left; margin: 0.3rem 0; box-shadow: 0 3px 0 rgb(0 0 0 / 20%); }
+.lego small { font-family: inherit; opacity: 0.85; font-weight: 500; margin-left: 0.8rem; }
+.lego.select { background: #e63946; }
+.lego.from { background: #f4845f; }
+.lego.join { background: #c0508a; }
+.lego.where { background: #2a9d8f; }
+.lego.group { background: #3b82d6; }
+.lego.having { background: #6c5ce7; }
+.lego.order { background: #e0a100; }
+.lego.limit { background: #8d6e63; }
+
+kbd {
+  background: #fff; border: 1px solid #d8c3a0; border-bottom-width: 3px; border-radius: 6px;
+  padding: 0 0.4em; font-size: 0.85em; font-family: var(--slidev-code-font-family);
+}
+
+table.plain { border-collapse: collapse; font-size: 0.9em; }
+table.plain th { background: var(--pp-brown); color: #fff; padding: 0.3rem 0.8rem; }
+table.plain td { padding: 0.3rem 0.8rem; border-bottom: 1px solid #ecd9b8; }
+
+.pizza-title { background: linear-gradient(90deg, #e63946, #ff9f1c); -webkit-background-clip: text; background-clip: text; color: transparent !important; }
