@@ -100,4 +100,5 @@ Il faut activer **Settings → Pages → Source : GitHub Actions** dans le dép�
 - Les slides sont en **anglais volontairement simple** (phrases courtes, beaucoup d'emojis) pour un public international.
   Pas de drapeaux en emoji (ils s'affichent en lettres sous Windows).
 - Les polices (Nunito, Fira Code) sont chargées depuis Google Fonts ; sans connexion, le navigateur utilise une police par défaut.
+- La couverture affiche le cours, le nom du professeur et le logo de l'école (`assets/esc-clermont-logo.svg`, logo officiel récupéré sur esc-clermont.fr, où l'école apparaît désormais sous le nom « Clermont School of Business »). Le texte est dans `components/CourseBadge.vue`.
 - Dialecte : **SQLite**. Les différences avec MySQL/PostgreSQL/SQL Server sont mentionnées (ex. `LIMIT` vs `TOP`).

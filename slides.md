@@ -22,6 +22,8 @@ fonts:
 layout: center
 ---
 
+<CourseBadge />
+
 <div class="pizza-spin">🍕</div>
 
 # <span class="pizza-title">SQL for Beginners</span>
@@ -34,6 +36,7 @@ Press <kbd>Space</kbd> or <kbd>→</kbd> to start &nbsp;·&nbsp; <kbd>O</kbd> ov
 
 <!--
 Cover slide. Every SQL example in this course runs in a real SQLite database inside the browser (sql.js).
+Course: Advanced Data Discovery — Damien FAYET, ESC Clermont (logo: assets/esc-clermont-logo.svg).
 Tip: press O for the slide overview, F for fullscreen, D to toggle dark mode (not styled — keep light).
 -->
 
